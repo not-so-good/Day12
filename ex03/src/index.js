@@ -1,11 +1,13 @@
 // Only change code below this line
 function rangeOfNumbers(startN, endN){
-    if(startN >= endN){
-        return "The starting number will always be less or equal to the ending number";
-    } else {
-        var countRange = rangeOfNumbers(startN, endN - 1);
-        countRange.push(endN);
-        return countRange;
+    if(startN === endN){
+        return [startN]; 
+        } else if(startN > endN){
+            return "The starting number will always be less or equal to the ending number";
+        } else {
+            var countRange = rangeOfNumbers(startN, endN - 1);
+            countRange.push(endN);
+            return countRange;
     }
 } 
 
