@@ -8,7 +8,7 @@ function myCounter(n){
         return countArray;
     }
 }
-// Only change code below this line
+// Only change code above this line
 
 console.log(myCounter(-1)); // Change this line
 console.log(myCounter(10));
