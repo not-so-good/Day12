@@ -1,19 +1,16 @@
 // Only change code below this line
-function sumFibonacci(num) {
-    var tempNum = 1;
-    var prevNum = 1;
-    var added = 0;
-    while(tempNum <= num){
-        if(tempNum % 2 !== 0){
-            added += tempNum;
-        }
-    prevNum = tempNum - prevNum;
-    tempNum += prevNum;    
+function sumFibonacci(num, tempNum = 0, prevNum = 1) {
+  if (tempNum > num) {
+      return 0;
+  } else if(num === 1) {
+      return 1;
+    } else if(tempNum % 2 !== 0) {
+        return tempNum + sumFibonacci(num, tempNum + prevNum, tempNum);
+    }else {
+        return 0 + sumFibonacci(num, tempNum + prevNum, tempNum);
     }
-return added;
 }
-    
-   
+
 // Only change code above this line
 
 console.log(sumFibonacci(1)); // Change this line
