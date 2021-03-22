@@ -1,32 +1,20 @@
-// Only change code below this line
-function myPetsFunction(pets) {
-   var pet = myPetsArray[1].name[0];
-   return pet;
-}
-
 var myPetsArray = [
-    {   
-        animalType: "Dog",
-        name: [
-        "Pujdo"
-        ]
-    },
-    {   
-        animalType: "Cat",
-        name: [
-        "Maca"
-        ]
-    },
-    {
-        animalType: "Bird",
-        name: [
-            "Tweety"
-        ]
-    }
+  {
+    animalType: "Dog",
+    name: "Pujdo",
+  },
+  {
+    animalType: "Cat",
+    name: "Maca",
+  },
+  {
+    animalType: "Bird",
+    name: "Tweety",
+  },
 ];
-
-// Only change above below this line
-
-console.log(myPetsFunction()); //Chanhe this line
+function myPetsFunction(pets) {
+  return pets[1].name;
+}
+console.log(myPetsFunction(myPetsArray));
 module.exports = myPetsFunction;
-module.exports = myPetsArray;
+module.exports.myPets = myPetsArray;
